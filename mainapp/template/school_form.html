@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>School List</title>
+</head>
+<body>
+    <div class="container ">
+    <center><h2>Student Form Page</h2>
+<form method="POST">
+
+    {%csrf_token%}
+    <label for="name">School Name:</label>
+    <input type="text" name="name" id="name" required>
+    <button type="submit">Create School</button>
+</form>
+
+
+</center>
+</div>
+
+
+
+
+
+</body>
+</html>
+<style>
+label{
+    float: left;
+}
+.container {
+    width: 500px !important;
+}
+</style>

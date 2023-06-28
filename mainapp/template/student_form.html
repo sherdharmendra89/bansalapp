@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>School List</title>
+</head>
+<body>
+    <div class="container ">
+    <center><h2>Student Form Page</h2>
+<form method="POST">
+
+    {%csrf_token%}
+    <div class="form-group">
+    <label for="name">Student Name:</label>
+    <input type="text" name="name" id="name" required>
+    </div>
+
+    <div class="form-group">
+    <label for="name">Enrollment:</label>
+    <input type="text" name="enrollment" id="enrollment" required>
+    </div>
+
+    <div class="form-group">
+    <label for="name">School:</label>
+    <select name="school" id="school" required>
+        {% for school in schools %}
+         <option value="{{school.id}}">{{school.name}}</option>
+         {% endfor %}
+    </select>
+    </div>
+    <div class="form-group">
+    <button type="submit">Create Student</button>
+    </div>
+</form></center>
+    </div>
+
+
+
+ 
+
+</body>
+</html>
+<style>
+    label{
+        float: left;
+    }
+    .container {
+        width: 500px !important;
+    }
+    </style>
